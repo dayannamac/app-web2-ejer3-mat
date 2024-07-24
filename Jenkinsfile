@@ -13,7 +13,7 @@ node {
 
     //Borrrar carpeta del html
     stage ('Eliminar contenido del servidor') {
-        bat 'rd /s /q D:\\Servidor\\fire'
+        bat 'del /q "D:\\Servidor\\fire\\*.*"'
     }
 
     stage ('Mover al servidor') {
