@@ -12,6 +12,9 @@ node {
     }
 
     //Borrrar carpeta del html
+    stage ('Eliminar contenido del servidor') {
+        bat 'del D:\\Servidor\\fire/*.* /s /Q'
+    }
 
     stage ('Mover al servidor') {
         bat 'xcopy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\angular-pipeline\\dist\\app-03\\browser D:\\Servidor\\fire /E /I /Y'
